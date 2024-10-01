@@ -4,6 +4,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -20,4 +21,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: ${{ github.event_name == 'push' }}
-          tags: martenseemann/chrome-quic-interop-runner:latest
+          tags: chipitsine/chrome-quic-interop-runner:latest
