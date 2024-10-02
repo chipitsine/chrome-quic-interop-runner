@@ -47,7 +47,7 @@ options.add_argument("--enable-quic")
 options.add_argument("--quic-version=80")
 options.add_argument("--origin-to-force-quic-on=" + server)
 options.add_argument("--log-net-log=/logs/chrome.json")
-options.add_argument("--net-log-capture-mode=IncludeSensitive")
+options.add_argument("--net-log-capture-mode=Everything")
 options.add_argument("--ignore-certificate-errors-spki-list=" + get_args().certhash)
 options.add_argument("--headless=new")
 options.add_experimental_option(
