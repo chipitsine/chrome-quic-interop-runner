@@ -16,8 +16,7 @@ RUN pip3 install selenium --break-system-packages
 RUN echo '----------------------'
 RUN google-chrome --version
 RUN echo '----------------------'
-RUN export CHROME_VERSION=$(google-chrome --version | awk '{print $3}')
-RUN echo $CHROME_VERSION
+RUN export CHROME_VERSION=$(google-chrome --version | awk '{print $3}'); echo $CHROME_VERSION
 RUN wget -q "https://storage.googleapis.com/chrome-for-testing-public/$CHROME_VERSION/linux64/chromedriver-linux64.zip" && \
   unzip chromedriver-linux64.zip && \
   mv chromedriver-linux64/chromedriver /usr/bin && \
