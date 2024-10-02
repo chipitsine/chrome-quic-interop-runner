@@ -38,7 +38,7 @@ print("Got server " + server)
 options = webdriver.ChromeOptions()
 options.gpu = False
 options.binary_location = "/usr/bin/google-chrome-beta"
-options.add_argument("--enable-logging")
+options.add_argument("--enable-logging=stderr")
 options.add_argument("--v=1")
 options.add_argument("--no-sandbox")
 options.add_argument("--enable-quic")
@@ -81,6 +81,6 @@ def check_files() -> bool:
 while not check_files():
     time.sleep(0.01)
 
-shutil.copy('~/chromium/chrome_debug.log', '/logs/')
+#shutil.copy('~/chromium/chrome_debug.log', '/logs/')
 
 driver.close()
